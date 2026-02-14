@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Maha Shivratri - The Saraswati Vidyalaya</title>
+
+<style>
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#000428,#004e92);
+    font-family:Arial, sans-serif;
+    overflow:hidden;
+}
+
+/* Card Design */
+.card{
+    width:350px;
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+    background:rgba(0,0,0,0.7);
+    box-shadow:0 0 30px #00ffff,
+               0 0 60px #00ffff;
+    color:white;
+    animation: glow 3s infinite alternate;
+}
+
+@keyframes glow{
+    from{ box-shadow:0 0 20px #00ffff; }
+    to{ box-shadow:0 0 60px #00ffff; }
+}
+
+h1{
+    font-size:28px;
+    color:#ffd700;
+    margin-bottom:10px;
+}
+
+h2{
+    font-size:18px;
+    margin-bottom:20px;
+    color:#ffffff;
+}
+
+.om{
+    font-size:50px;
+    animation:omGlow 2s infinite alternate;
+}
+
+@keyframes omGlow{
+    from{ text-shadow:0 0 10px #ffd700; }
+    to{ text-shadow:0 0 30px #ff0000,
+                     0 0 50px #ffd700; }
+}
+
+.message{
+    font-size:14px;
+    line-height:1.6;
+    margin-top:15px;
+}
+
+/* Floating Particles */
+.particle{
+    position:absolute;
+    width:6px;
+    height:6px;
+    background:white;
+    border-radius:50%;
+    opacity:0.7;
+    animation: float linear infinite;
+}
+
+@keyframes float{
+    from{ transform:translateY(100vh); }
+    to{ transform:translateY(-10vh); }
+}
+
+</style>
+</head>
+<body>
+
+<div class="card">
+    <div class="om">🕉</div>
+    <h1>Happy Maha Shivratri</h1>
+    <h2>The Saraswati Vidyalaya</h2>
+    <div class="message">
+        May Lord Shiva bless all students, teachers,  
+        and staff with wisdom, strength,  
+        and success in every endeavor.  
+        <br><br>
+        🔱 Har Har Mahadev 🔱
+    </div>
+</div>
+
+<script>
+// Floating particles
+for(let i=0;i<40;i++){
+    const p=document.createElement("div");
+    p.classList.add("particle");
+    p.style.left=Math.random()*100+"vw";
+    p.style.animationDuration=(5+Math.random()*5)+"s";
+    p.style.opacity=Math.random();
+    document.body.appendChild(p);
+}
+</script>
+
+</body>
+</html>
